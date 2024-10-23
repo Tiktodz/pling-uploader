@@ -26,5 +26,7 @@ jobs:
       run: ./setup.ps1
     - name: Starting CRD 
       run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
+    - name: Starting sleep
+      run: ./keepalive.ps1
     - name: Keep Alive
       run: ./timeout.ps1
